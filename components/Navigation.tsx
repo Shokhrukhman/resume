@@ -83,22 +83,28 @@ export function Navigation() {
               className="p-2 text-text-primary hover:text-accent transition-colors relative z-10"
               aria-label="Toggle menu"
             >
-              {isOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              <Menu className="h-6 w-6" />
             </button>
 
             {/* Mobile Dropdown Menu */}
             <div
-              className={`absolute top-full right-0 mt-2 w-48 bg-midnight-950 border border-border-subtle rounded-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`absolute top-full right-0 mt-1 w-52 bg-midnight-950 border border-border-subtle rounded-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
                 isOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2 pointer-events-none'
               }`}
             >
-              <div className="py-2">
+              <div className="py-1">
+                {/* Close Button */}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 text-text-primary hover:text-accent hover:bg-midnight-800 transition-all duration-200 border-b border-border-subtle"
+                >
+                  <X className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm font-medium">Close Menu</span>
+                </button>
+                
+                {/* Navigation Items */}
                 {navItems.map((item) => {
                   const Icon = item.icon
                   return (

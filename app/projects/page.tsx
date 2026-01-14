@@ -15,14 +15,14 @@ export default function ProjectsPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="flex justify-between items-center mb-8 js-reveal-section">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8 js-reveal-section">
             <div>
               <h1 className="text-4xl font-bold text-foreground mb-2">Projects</h1>
               <p className="text-muted-foreground">
                 Automation and analytics projects showcasing technical expertise
               </p>
             </div>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" size="sm" className="self-start sm:self-auto">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
