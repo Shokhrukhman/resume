@@ -1,0 +1,135 @@
+{
+  "personal": {
+    "name": "Shokhrukh Koshel",
+    "title": "Support Analyst / Process Automation Specialist",
+    "location": "Dubai — Remote",
+    "email": "regisanima55@gmail.com",
+    "phone": "+7 (904) 776-07-54",
+    "telegram": "https://t.me/regis_anima",
+    "whatsapp": "https://wa.me/79047760754",
+    "linkedin": "https://www.linkedin.com/in/shokhrukh-koshel-379735353/"
+  },
+  "summary": "Versatile specialist with strong experience in **technical support**, **analytics**, and **process automation**. Skilled in building efficient systems using **Python**, **PostgreSQL**, **Google Sheets**, and **n8n** to improve workflows and reduce operational load. Proven ability to analyze data, optimize user experience, and lead teams through structured communication and quality control. Combines analytical thinking with a customer-centered approach to deliver measurable results and continuous improvement.",
+  "skills": {
+    "technical": [
+      "Python (automation & analytics)",
+      "PostgreSQL",
+      "Google Sheets (dashboards, formulas)",
+      "Intercom (API, workflows, analytics)",
+      "n8n (automation)",
+      "CRM systems (AmoCRM, optimization)"
+    ],
+    "analytical": [
+      "Data Analysis (cohort, funnel, retention)",
+      "Technical Support & QA",
+      "Sales & Customer Retention",
+      "Process Optimization"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Web3 Social Platform (NDA)",
+      "position": "Support Analyst / Process Automation Specialist",
+      "period": "2024–2025",
+      "achievements": [
+        "Automated workflows in Google Sheets and n8n (reduced manual work by 96%)",
+        "Built PostgreSQL dashboards",
+        "Developed API scripts for Intercom data",
+        "Performed cohort & funnel analysis",
+        "Led QC meetings",
+        "Improved product KPIs"
+      ]
+    },
+    {
+      "company": "Matrius (Remote)",
+      "position": "Programming Teacher",
+      "period": "2024",
+      "achievements": [
+        "Taught programming to children (Python, Scratch, Lua)",
+        "Designed project-based lessons",
+        "Ran inclusive coding workshops"
+      ]
+    },
+    {
+      "company": "Riman (Kyrgyzstan)",
+      "position": "Sales & Process Optimization Specialist",
+      "period": "2024",
+      "achievements": [
+        "Integrated automation bots to improve efficiency",
+        "Managed key partner relationships",
+        "Optimized CRM processes"
+      ]
+    },
+    {
+      "company": "EdenEX (Slovakia)",
+      "position": "CRM Integrator & Business Development Specialist",
+      "period": "2023–2025",
+      "achievements": [
+        "Implemented and optimized CRM workflows (AmoCRM)",
+        "Improved sales team efficiency",
+        "Developed automation scripts"
+      ]
+    },
+    {
+      "company": "Algorithmics (Moscow)",
+      "position": "Sales & Student Coordinator",
+      "period": "2023",
+      "achievements": [
+        "Managed student onboarding, retention, and parent communication for an online programming school"
+      ]
+    },
+    {
+      "company": "SkyEng (Moscow)",
+      "position": "Sales & Support Specialist",
+      "period": "2021–2023",
+      "achievements": [
+        "Promoted to Deputy Team Lead",
+        "Handled B2C/B2B sales, support, onboarding, and call quality control"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's in Criminal Law",
+      "institution": "State Humanitarian-Technological University, Moscow",
+      "period": "2017–2021"
+    },
+    {
+      "degree": "Associate Degree in Information Security",
+      "institution": "Kyrgyulin Technological College, Fergana",
+      "period": "2013–2016"
+    }
+  ],
+  "achievements": [
+    "Built Python scripts reducing data processing time by 30%",
+    "Automated ticket handling and analytics, increasing support efficiency by 20%",
+    "Proposed and implemented 3 hypotheses improving retention metrics"
+  ],
+  "languages": ["English", "Russian", "Uzbek"],
+  "interests": [
+    "Process optimization",
+    "Automation",
+    "Data analytics",
+    "Continuous learning"
+  ],
+  "projects": [
+    {
+      "title": "Workflow Automation System",
+      "description": "Built comprehensive automation system using n8n and Python to reduce manual work by 96% in data processing workflows.",
+      "technologies": ["Python", "n8n", "PostgreSQL", "Google Sheets API"],
+      "impact": "96% reduction in manual work"
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "Developed real-time analytics dashboard using PostgreSQL and Google Sheets for tracking user behavior and business metrics.",
+      "technologies": ["PostgreSQL", "Google Sheets", "Python", "Intercom API"],
+      "impact": "Real-time insights for data-driven decisions"
+    },
+    {
+      "title": "CRM Optimization",
+      "description": "Implemented and optimized CRM workflows in AmoCRM, improving sales team efficiency and customer retention.",
+      "technologies": ["AmoCRM", "Python", "Automation Scripts"],
+      "impact": "20% increase in support efficiency"
+    }
+  ]
+}
