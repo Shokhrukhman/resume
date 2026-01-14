@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
@@ -6,6 +6,13 @@ import { cn } from '@/lib/utils'
 import { GsapAnimations } from '@/components/gsap-animations'
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 export const metadata: Metadata = {
   title: 'Shokhrukh Koshel - Support Analyst & Process Automation Specialist',

@@ -144,6 +144,19 @@
   }
 }
 
+/* Ensure sections are always visible and not overlapped */
+.js-reveal-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100px; /* Ensure minimum height */
+}
+
+/* Footer should not overlap content */
+footer {
+  position: relative;
+  z-index: 1;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .lift:hover { transform: none; }

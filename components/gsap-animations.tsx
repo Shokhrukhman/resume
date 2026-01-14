@@ -92,8 +92,9 @@ export function GsapAnimations() {
         ease: CONFIG.reveal.ease,
         scrollTrigger: {
           trigger: el,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
+          start: 'top 85%',
+          toggleActions: 'play none none none', // Не скрывать при обратном скролле
+          once: true, // Анимировать только один раз
         },
       })
     })

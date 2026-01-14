@@ -17,13 +17,19 @@ export function Navigation() {
 
   // Закрывать меню при клике вне его
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (isOpen && !target.closest('.mobile-menu-container') && !target.closest('button[aria-label="Toggle menu"]')) {
+        setIsOpen(false)
+      }
     }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
     return () => {
-      document.body.style.overflow = 'unset'
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [isOpen])
 
@@ -36,9 +42,9 @@ export function Navigation() {
   const isActive = (href: string) => pathname === href
 
   return (
-    <nav className="border-b border-border-subtle bg-midnight-950/80 backdrop-blur-sm sticky top-0 z-50">
+    <nav className="border-b border-border-subtle bg-midnight-950/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center relative">
           {/* Logo */}
           <Link 
             href="/" 
@@ -69,56 +75,49 @@ export function Navigation() {
             })}
           </div>
 
-          {/* Mobile Burger Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-text-primary hover:text-accent transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
+          {/* Mobile Menu Container */}
+          <div className="md:hidden relative mobile-menu-container">
+            {/* Mobile Burger Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-text-primary hover:text-accent transition-colors relative z-10"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
 
-        {/* Mobile Menu Overlay */}
-        {isOpen && (
-          <div
-            className="md:hidden fixed inset-0 top-[73px] bg-black/80 z-30"
-            onClick={() => setIsOpen(false)}
-          />
-        )}
-
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden fixed inset-y-0 right-0 top-[73px] w-full max-w-sm bg-midnight-950 border-l border-accent/20 z-40 shadow-2xl transition-all duration-300 ease-in-out ${
-            isOpen
-              ? 'opacity-100 visible translate-x-0'
-              : 'opacity-0 invisible translate-x-full'
-          }`}
-        >
-          <div className="h-full flex flex-col p-6 pt-8">
-            <div className="flex flex-col space-y-2">
-              {navItems.map((item) => {
-                const Icon = item.icon
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-4 px-4 py-4 rounded-lg transition-all duration-300 ${
-                      isActive(item.href)
-                        ? 'text-accent bg-accent/20 border-l-4 border-accent shadow-lg shadow-accent/20'
-                        : 'text-text-primary bg-midnight-800/50 hover:text-accent hover:bg-midnight-800 hover:border-l-4 hover:border-accent/50'
-                    }`}
-                  >
-                    <Icon className="h-6 w-6 flex-shrink-0" />
-                    <span className="text-lg font-semibold">{item.label}</span>
-                  </Link>
-                )
-              })}
+            {/* Mobile Dropdown Menu */}
+            <div
+              className={`absolute top-full right-0 mt-2 w-48 bg-midnight-950 border border-border-subtle rounded-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
+                isOpen
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2 pointer-events-none'
+              }`}
+            >
+              <div className="py-2">
+                {navItems.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center gap-3 px-4 py-3 transition-all duration-200 ${
+                        isActive(item.href)
+                          ? 'text-accent bg-accent/20 border-l-4 border-accent'
+                          : 'text-text-primary hover:text-accent hover:bg-midnight-800'
+                      }`}
+                    >
+                      <Icon className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-sm font-medium">{item.label}</span>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>
