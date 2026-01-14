@@ -42,7 +42,7 @@ export function Navigation() {
   const isActive = (href: string) => pathname === href
 
   return (
-    <nav className="border-b border-border-subtle bg-midnight-950/95 backdrop-blur-sm sticky top-0 z-50">
+    <nav className="border-b border-border-subtle bg-midnight-950/95 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 w-full">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center relative">
           {/* Logo */}
