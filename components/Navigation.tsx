@@ -86,21 +86,21 @@ export function Navigation() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div
-            className="md:hidden fixed inset-0 top-[73px] bg-black/50 backdrop-blur-sm z-30"
+            className="md:hidden fixed inset-0 top-[73px] bg-black/80 z-30"
             onClick={() => setIsOpen(false)}
           />
         )}
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-y-0 right-0 top-[73px] w-80 max-w-[85vw] bg-midnight-950/98 backdrop-blur-md z-40 shadow-2xl border-l border-border-subtle transition-all duration-300 ease-in-out ${
+          className={`md:hidden fixed inset-y-0 right-0 top-[73px] w-full max-w-sm bg-midnight-950 border-l border-accent/20 z-40 shadow-2xl transition-all duration-300 ease-in-out ${
             isOpen
               ? 'opacity-100 visible translate-x-0'
               : 'opacity-0 invisible translate-x-full'
           }`}
         >
-          <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col space-y-4">
+          <div className="h-full flex flex-col p-6 pt-8">
+            <div className="flex flex-col space-y-2">
               {navItems.map((item) => {
                 const Icon = item.icon
                 return (
@@ -108,14 +108,14 @@ export function Navigation() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-4 px-4 py-3 rounded-lg transition-all duration-300 ${
+                    className={`flex items-center gap-4 px-4 py-4 rounded-lg transition-all duration-300 ${
                       isActive(item.href)
-                        ? 'text-accent bg-accent/10 border-l-4 border-accent'
-                        : 'text-text-secondary hover:text-accent hover:bg-midnight-800'
+                        ? 'text-accent bg-accent/20 border-l-4 border-accent shadow-lg shadow-accent/20'
+                        : 'text-text-primary bg-midnight-800/50 hover:text-accent hover:bg-midnight-800 hover:border-l-4 hover:border-accent/50'
                     }`}
                   >
-                    <Icon className="h-5 w-5" />
-                    <span className="text-lg font-medium">{item.label}</span>
+                    <Icon className="h-6 w-6 flex-shrink-0" />
+                    <span className="text-lg font-semibold">{item.label}</span>
                   </Link>
                 )
               })}
