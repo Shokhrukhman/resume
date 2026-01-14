@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "validate": "node -e \"try { JSON.parse(require('fs').readFileSync('content/profile.json', 'utf8')); console.log('✅ JSON валиден!'); } catch(e) { console.error('❌ Ошибка JSON:', e.message); process.exit(1); }\""
+    "validate": "node -e \"try { JSON.parse(require('fs').readFileSync('content/profile.json', 'utf8')); console.log('✅ JSON валиден!'); } catch(e) { console.error('❌ Ошибка JSON:', e.message); process.exit(1); }\"",
+    "export": "next build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
