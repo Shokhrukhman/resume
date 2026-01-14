@@ -42,13 +42,13 @@ export function Navigation() {
   const isActive = (href: string) => pathname === href
 
   return (
-    <nav className="border-b border-border-subtle bg-midnight-950/95 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 w-full">
-      <div className="container mx-auto px-4 py-4">
+    <nav className="border-b border-border-subtle bg-midnight-950/95 backdrop-blur-sm relative z-50 w-full">
+      <div className="container mx-auto px-4 py-2 md:py-4">
         <div className="flex justify-between items-center relative">
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold text-accent hover:text-accent/80 transition-colors"
+            className="text-lg md:text-xl font-bold text-accent hover:text-accent/80 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             {profileData.personal.name.split(' ')[0]}
@@ -80,10 +80,10 @@ export function Navigation() {
             {/* Mobile Burger Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-text-primary hover:text-accent transition-colors relative z-10"
+              className="p-1.5 text-text-primary hover:text-accent transition-colors relative z-10"
               aria-label="Toggle menu"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             </button>
           </div>
 
