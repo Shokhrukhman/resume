@@ -88,7 +88,7 @@ export function Navigation() {
 
             {/* Mobile Dropdown Menu */}
             <div
-              className={`absolute top-full right-0 mt-1 w-52 bg-midnight-950 border border-border-subtle rounded-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`absolute top-full right-0 w-52 bg-midnight-950 border border-border-subtle rounded-b-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
                 isOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible -translate-y-2 pointer-events-none'
