@@ -5,31 +5,12 @@ import Link from 'next/link'
 import profileData from '@/content/profile.json'
 import { Section } from '@/components/Section'
 import { PrintButton } from '@/components/print-button'
+import { Navigation } from '@/components/Navigation'
 
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="text-xl font-bold text-primary">
-              {profileData.personal.name}
-            </Link>
-            <div className="flex space-x-4">
-              <Link href="/" className="text-foreground hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/resume" className="text-primary">
-                Resume
-              </Link>
-              <Link href="/projects" className="text-foreground hover:text-primary transition-colors">
-                Projects
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Resume Content */}
       <div className="container mx-auto px-4 py-8">

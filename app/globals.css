@@ -136,6 +136,14 @@
   }
 }
 
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  /* Smooth mobile menu transitions */
+  nav {
+    transition: all 0.3s ease;
+  }
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .lift:hover { transform: none; }
@@ -143,6 +151,12 @@
     animation: none; 
   }
   .btn-primary:hover { transform: none; }
+  
+  /* Disable menu animations for reduced motion */
+  nav * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 /* Print styles for resume page */
