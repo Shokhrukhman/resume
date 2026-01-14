@@ -87,9 +87,9 @@ export function Navigation() {
             </button>
           </div>
 
-          {/* Mobile Dropdown Menu - Fixed to top-right corner */}
+          {/* Mobile Dropdown Menu - Fixed to top-right corner, above header */}
           <div
-            className={`md:hidden fixed top-[73px] right-0 w-52 bg-midnight-950 border-l border-b border-border-subtle rounded-bl-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out z-40 mobile-dropdown-menu ${
+            className={`md:hidden fixed top-0 right-0 w-52 bg-midnight-950 border-l border-b border-border-subtle rounded-bl-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out z-[60] mobile-dropdown-menu ${
               isOpen
                 ? 'opacity-100 visible translate-x-0'
                 : 'opacity-0 invisible translate-x-full pointer-events-none'
