@@ -19,7 +19,7 @@ export function Navigation() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement
-      if (isOpen && !target.closest('.mobile-menu-container') && !target.closest('button[aria-label="Toggle menu"]')) {
+      if (isOpen && !target.closest('.mobile-menu-container') && !target.closest('button[aria-label="Toggle menu"]') && !target.closest('.mobile-dropdown-menu')) {
         setIsOpen(false)
       }
     }
@@ -85,45 +85,45 @@ export function Navigation() {
             >
               <Menu className="h-6 w-6" />
             </button>
+          </div>
 
-            {/* Mobile Dropdown Menu */}
-            <div
-              className={`absolute top-full right-0 w-52 bg-midnight-950 border border-border-subtle rounded-b-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
-                isOpen
-                  ? 'opacity-100 visible translate-y-0'
-                  : 'opacity-0 invisible -translate-y-2 pointer-events-none'
-              }`}
-            >
-              <div className="py-1">
-                {/* Close Button */}
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="w-full flex items-center gap-3 px-4 py-3 text-text-primary hover:text-accent hover:bg-midnight-800 transition-all duration-200 border-b border-border-subtle"
-                >
-                  <X className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-sm font-medium">Close Menu</span>
-                </button>
-                
-                {/* Navigation Items */}
-                {navItems.map((item) => {
-                  const Icon = item.icon
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`flex items-center gap-3 px-4 py-3 transition-all duration-200 ${
-                        isActive(item.href)
-                          ? 'text-accent bg-accent/20 border-l-4 border-accent'
-                          : 'text-text-primary hover:text-accent hover:bg-midnight-800'
-                      }`}
-                    >
-                      <Icon className="h-4 w-4 flex-shrink-0" />
-                      <span className="text-sm font-medium">{item.label}</span>
-                    </Link>
-                  )
-                })}
-              </div>
+          {/* Mobile Dropdown Menu - Fixed to top-right corner */}
+          <div
+            className={`md:hidden fixed top-[73px] right-0 w-52 bg-midnight-950 border-l border-b border-border-subtle rounded-bl-lg shadow-2xl overflow-hidden transition-all duration-300 ease-in-out z-40 mobile-dropdown-menu ${
+              isOpen
+                ? 'opacity-100 visible translate-x-0'
+                : 'opacity-0 invisible translate-x-full pointer-events-none'
+            }`}
+          >
+            <div className="py-1">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center gap-3 px-4 py-3 text-text-primary hover:text-accent hover:bg-midnight-800 transition-all duration-200 border-b border-border-subtle"
+              >
+                <X className="h-4 w-4 flex-shrink-0" />
+                <span className="text-sm font-medium">Close Menu</span>
+              </button>
+              
+              {/* Navigation Items */}
+              {navItems.map((item) => {
+                const Icon = item.icon
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center gap-3 px-4 py-3 transition-all duration-200 ${
+                      isActive(item.href)
+                        ? 'text-accent bg-accent/20 border-l-4 border-accent'
+                        : 'text-text-primary hover:text-accent hover:bg-midnight-800'
+                    }`}
+                  >
+                    <Icon className="h-4 w-4 flex-shrink-0" />
+                    <span className="text-sm font-medium">{item.label}</span>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
