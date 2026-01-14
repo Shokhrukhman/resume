@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { GsapAnimations } from '@/components/gsap-animations'
+import { ScrollToTop } from '@/components/ScrollToTop'
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
@@ -65,6 +66,7 @@ export default function RootLayout({
         />
         <GsapAnimations />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   )
