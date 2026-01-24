@@ -236,7 +236,7 @@ git push
 ```json
 {
   "skills": {
-    "technical": ["Python", "PostgreSQL", "JavaScript"]
+    "technical": ["Python", "PostgreSQL", "Looker Studio"]
   }
 }
 ```
@@ -245,7 +245,7 @@ git push
 ```json
 {
   "skills": {
-    "technical": ["Python", "PostgreSQL", "JavaScript",]  // ← лишняя запятая
+    "technical": ["Python", "PostgreSQL", "Looker Studio",]  // ← лишняя запятая
   }
 }
 ```

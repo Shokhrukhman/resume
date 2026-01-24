@@ -112,7 +112,7 @@ export default function ProjectsPage() {
                   { name: 'Google Sheets', category: 'Analytics' },
                   { name: 'Intercom API', category: 'Integration' },
                   { name: 'AmoCRM', category: 'CRM' },
-                  { name: 'JavaScript', category: 'Programming' },
+                  { name: 'Looker Studio', category: 'Dashboards' },
                   { name: 'Data Analysis', category: 'Analytics' }
                 ].map((tech, index) => (
                   <div key={index} className="text-center p-4 bg-midnight-800 rounded-lg border border-border-subtle lift">
