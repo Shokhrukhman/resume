@@ -16,23 +16,27 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Shokhrukh Koshel - Support Analyst & Process Automation Specialist',
-  description: 'Versatile specialist with strong experience in technical support, analytics, and process automation. Skilled in Python, PostgreSQL, Google Sheets, and n8n.',
-  keywords: ['Shokhrukh Koshel', 'Support Analyst', 'Process Automation', 'Python', 'PostgreSQL', 'Data Analytics', 'Dubai'],
+  title: 'Shokhrukh Koshel - Support Analyst & Head of Support',
+  description: 'Customer Support Manager with a strong technical and analytical background. Experienced in leading support teams, optimizing workflows, and implementing automation.',
+  keywords: ['Shokhrukh Koshel', 'Support Analyst', 'Head of Support', 'Customer Support', 'Team Management', 'Process Automation', 'Python', 'PostgreSQL', 'Intercom', 'Dubai'],
   authors: [{ name: 'Shokhrukh Koshel' }],
   creator: 'Shokhrukh Koshel',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://shokhrukh.dev',
-    title: 'Shokhrukh Koshel - Support Analyst & Process Automation Specialist',
-    description: 'Versatile specialist with strong experience in technical support, analytics, and process automation.',
+    title: 'Shokhrukh Koshel - Support Analyst & Head of Support',
+    description: 'Customer Support Manager with a strong technical and analytical background. Experienced in leading support teams, optimizing workflows, and implementing automation.',
     siteName: 'Shokhrukh Koshel Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shokhrukh Koshel - Support Analyst & Process Automation Specialist',
-    description: 'Versatile specialist with strong experience in technical support, analytics, and process automation.',
+    title: 'Shokhrukh Koshel - Support Analyst & Head of Support',
+    description: 'Customer Support Manager with a strong technical and analytical background. Experienced in leading support teams, optimizing workflows, and implementing automation.',
   },
   robots: {
     index: true,
