@@ -138,17 +138,17 @@
     text-shadow: 0 0 18px rgba(56,189,248,0.28);
   }
 
-  /* Regis Anima Logo hover effect */
+  /* Regis Anima Logo hover effect - subtle glow and smooth scale */
   .logo-link {
     transition: transform 0.3s ease, filter 0.3s ease;
     will-change: transform, filter;
   }
   .logo-link:hover {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 12px rgba(56,189,248,0.6)) drop-shadow(0 0 24px rgba(56,189,248,0.3));
+    filter: drop-shadow(0 0 8px rgba(56,189,248,0.5)) drop-shadow(0 0 16px rgba(56,189,248,0.25));
   }
   .logo-link svg {
-    transition: filter 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
 
