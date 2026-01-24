@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Mail, Phone, MapPin, Send, Download, User, MessageCircle, Linkedin } from 'lucide-react'
@@ -8,10 +6,8 @@ import profileData from '@/content/profile.json'
 import { IconBadge } from '@/components/IconBadge'
 import { Section } from '@/components/Section'
 import { Navigation } from '@/components/Navigation'
-import { useI18n } from '@/lib/i18n'
 
 export default function HomePage() {
-  const { t } = useI18n()
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -26,7 +22,7 @@ export default function HomePage() {
                 {profileData.personal.name}
               </h1>
               <p className="text-lg text-text-secondary mb-6 js-hero-subtitle">
-                <span className="emph">{t('hero.supportAnalyst')}</span> / {t('hero.headOfSupport')}
+                <span className="emph">Support Analyst</span> / Head of Support
               </p>
               <div className="flex items-center justify-center gap-2 text-text-muted mb-8">
                 <MapPin className="h-4 w-4" />
@@ -62,13 +58,13 @@ export default function HomePage() {
               <Button asChild size="lg" className="btn-primary">
                 <Link href="/resume">
                   <User className="mr-2 h-4 w-4" />
-                  {t('buttons.openResume')}
+                  Open Resume
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-border-subtle hover:bg-midnight-800">
                 <Link href="#contact">
                   <Mail className="mr-2 h-4 w-4" />
-                  {t('buttons.contactMe')}
+                  Contact Me
                 </Link>
               </Button>
             </div>
@@ -77,10 +73,10 @@ export default function HomePage() {
       </section>
 
       {/* Key Skills Section */}
-      <Section title={t('sections.keySkills')}>
+      <Section title="Key Skills">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="card p-6 lift">
-            <h3 className="text-xl font-bold text-accent mb-4">{t('sections.technicalSkills')}</h3>
+            <h3 className="text-xl font-bold text-accent mb-4">Technical Skills</h3>
             <div className="flex flex-wrap gap-2">
               {profileData.skills.technical.map((skill, index) => (
                 <span
@@ -94,7 +90,7 @@ export default function HomePage() {
           </div>
 
           <div className="card p-6 lift">
-            <h3 className="text-xl font-bold text-accent mb-4">{t('sections.analyticalSkills')}</h3>
+            <h3 className="text-xl font-bold text-accent mb-4">Analytical Skills</h3>
             <div className="flex flex-wrap gap-2">
               {profileData.skills.analytical.map((skill, index) => (
                 <span
@@ -110,7 +106,7 @@ export default function HomePage() {
       </Section>
 
       {/* Recent Experience Preview */}
-      <Section title={t('sections.recentExperience')}>
+      <Section title="Recent Experience">
         <div className="card p-6 lift">
           <div className="text-left">
             <h3 className="text-xl font-semibold text-text-primary mb-2">
@@ -132,13 +128,13 @@ export default function HomePage() {
       </Section>
 
       {/* Contact Information */}
-      <Section id="contact" title={t('sections.contactMe')}>
+      <Section id="contact" title="Contact Me">
         <div className="flex flex-wrap justify-center gap-4">
           <div className="card p-4 lift w-[240px]">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0 flex-1">
-                <p className="text-sm text-text-muted">{t('contact.email')}</p>
+                <p className="text-sm text-text-muted">Email</p>
                 <a 
                   href={`mailto:${profileData.personal.email}`}
                   className="text-text-primary hover:text-accent transition-colors text-sm whitespace-nowrap overflow-hidden text-ellipsis block glow-hover"
@@ -155,7 +151,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0">
-                <p className="text-sm text-text-muted">{t('contact.phone')}</p>
+                <p className="text-sm text-text-muted">Phone</p>
                 <a 
                   href={`tel:${profileData.personal.phone}`}
                   className="text-text-primary hover:text-accent transition-colors text-sm glow-hover"
@@ -171,7 +167,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               <Send className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0">
-                <p className="text-sm text-text-muted">{t('contact.telegram')}</p>
+                <p className="text-sm text-text-muted">Telegram</p>
                 <a 
                   href={profileData.personal.telegram}
                   target="_blank"
@@ -189,7 +185,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               <MessageCircle className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0">
-                <p className="text-sm text-text-muted">{t('contact.whatsapp')}</p>
+                <p className="text-sm text-text-muted">WhatsApp</p>
                 <a 
                   href={profileData.personal.whatsapp}
                   target="_blank"
@@ -207,7 +203,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-3">
               <Linkedin className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0">
-                <p className="text-sm text-text-muted">{t('contact.linkedin')}</p>
+                <p className="text-sm text-text-muted">LinkedIn</p>
                 <a 
                   href={profileData.personal.linkedin}
                   target="_blank"
@@ -227,7 +223,7 @@ export default function HomePage() {
       <footer className="border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <p className="text-center text-muted-foreground">
-            © 2025 {profileData.personal.name} — {t('footer.copyright')}
+            © 2025 {profileData.personal.name} — All Rights Reserved
           </p>
         </div>
       </footer>

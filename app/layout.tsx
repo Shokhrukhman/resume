@@ -5,7 +5,6 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import { GsapAnimations } from '@/components/gsap-animations'
 import { ScrollToTop } from '@/components/ScrollToTop'
-import { ClientProviders } from '@/components/ClientProviders'
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
@@ -74,11 +73,9 @@ export default function RootLayout({
           src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
           strategy="beforeInteractive"
         />
-        <ClientProviders>
-          <GsapAnimations />
-          {children}
-          <ScrollToTop />
-        </ClientProviders>
+        <GsapAnimations />
+        {children}
+        <ScrollToTop />
       </body>
     </html>
   )
