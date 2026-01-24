@@ -51,7 +51,7 @@ export function Navigation() {
             className="flex items-center transition-all duration-300 hover:scale-[1.08] logo-link"
             onClick={() => setIsOpen(false)}
           >
-            <RegisAnimaLogo className="h-14 w-14 md:h-16 md:w-16" />
+            <RegisAnimaLogo className="h-10 w-10 md:h-12 md:w-12" />
           </Link>
 
           {/* Desktop Navigation */}
