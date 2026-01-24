@@ -31,16 +31,14 @@ export default function ProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="flex justify-center js-reveal-section">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
-              {profileData.projects.map((project, index) => {
+          <div className="js-reveal-section">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {profileData.projects.slice(0, 3).map((project, index) => {
                 // Иконки для каждого проекта
                 const projectIcons = [
                   <Zap key="zap" className="h-5 w-5 text-accent" />, // Support System from Scratch
                   <Database key="db" className="h-5 w-5 text-accent" />, // Workflow Automation System
                   <TrendingUp key="trend" className="h-5 w-5 text-accent" />, // Support Analytics & Quality Control
-                  <Users key="users" className="h-5 w-5 text-accent" />, // 24/7 Support Department Setup
-                  <Globe2 key="globe" className="h-5 w-5 text-accent" />, // Support Operations Optimization & Geo-Automation
                 ]
                 
                 return (
@@ -84,6 +82,58 @@ export default function ProjectsPage() {
                 )
               })}
             </div>
+            {/* Last 2 projects centered */}
+            {profileData.projects.length > 3 && (
+              <div className="flex justify-center gap-8 mt-8">
+                {profileData.projects.slice(3).map((project, index) => {
+                  const actualIndex = index + 3
+                  const projectIcons = [
+                    <Users key="users" className="h-5 w-5 text-accent" />, // 24/7 Support Department Setup
+                    <Globe2 key="globe" className="h-5 w-5 text-accent" />, // Support Operations Optimization & Geo-Automation
+                  ]
+                  
+                  return (
+                    <div key={actualIndex} className="card p-6 lift w-full max-w-md" data-gsap-hover>
+                      <div className="flex items-center gap-3 mb-4">
+                        {projectIcons[index]}
+                        <h3 className="text-lg font-bold text-text-primary">{project.title}</h3>
+                      </div>
+                      <p className="text-text-secondary mb-6">
+                        {project.description}
+                      </p>
+                      
+                      <div className="space-y-4">
+                        {/* Technologies */}
+                        <div>
+                          <h4 className="font-semibold text-text-primary mb-2 flex items-center gap-2">
+                            <Code className="h-4 w-4" />
+                            Technologies
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className="px-2 py-1 bg-midnight-800 text-text-secondary rounded text-xs border border-border-subtle"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Impact */}
+                        <div>
+                          <h4 className="font-semibold text-text-primary mb-2">Impact</h4>
+                          <p className="text-sm text-text-muted bg-midnight-800 p-3 rounded border border-border-subtle">
+                            {project.impact}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
 
           {/* Additional Project Information */}
@@ -91,21 +141,23 @@ export default function ProjectsPage() {
             <div className="card p-6">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold text-text-primary mb-3">Automation Expertise</h4>
+                  <h4 className="font-semibold text-text-primary mb-3">Support Department Leadership</h4>
                   <ul className="space-y-2 text-text-muted">
-                    <li>• Built comprehensive workflow automation using n8n</li>
-                    <li>• Developed Python scripts for data processing</li>
-                    <li>• Integrated multiple APIs for seamless data flow</li>
-                    <li>• Reduced manual work by <span className="emph">96%</span> through automation</li>
+                    <li>• Built complete support departments from scratch, establishing 24/7 coverage</li>
+                    <li>• Designed efficient workflows to minimize customer wait times</li>
+                    <li>• Implemented comprehensive metrics tracking for SLA compliance and quality</li>
+                    <li>• Created knowledge bases from the ground up for agents and customers</li>
+                    <li>• Managed teams of 3-15 specialists with scalable operational models</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-text-primary mb-3">Analytics & Insights</h4>
+                  <h4 className="font-semibold text-text-primary mb-3">Operations Optimization & Automation</h4>
                   <ul className="space-y-2 text-text-muted">
-                    <li>• Created real-time PostgreSQL dashboards</li>
-                    <li>• Implemented cohort and funnel analysis</li>
-                    <li>• Built Google Sheets automation for reporting</li>
-                    <li>• Improved data processing time by <span className="emph">30%</span></li>
+                    <li>• Reduced operator workload by <span className="emph">60%</span> through API automation</li>
+                    <li>• Built automated response flows for multiple geographic regions</li>
+                    <li>• Established comprehensive data collection and analysis systems</li>
+                    <li>• Optimized support operations by eliminating manual and routine tasks</li>
+                    <li>• Improved team efficiency through process automation and workflow design</li>
                   </ul>
                 </div>
               </div>

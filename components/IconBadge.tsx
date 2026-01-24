@@ -1,7 +1,7 @@
 "use client";
-import { Database, Workflow, Bot, Settings2, FileSpreadsheet, Mail, Phone, Github, Linkedin, MessageCircle } from "lucide-react";
+import { Database, Workflow, Bot, Settings2, FileSpreadsheet, Mail, Phone, Github, Linkedin, MessageCircle, Users, Target, BarChart3, TrendingUp, Shield, Zap, Briefcase } from "lucide-react";
 
-type IconName = "db"|"workflow"|"bot"|"ops"|"sheets"|"mail"|"phone"|"github"|"linkedin"|"tg";
+type IconName = "db"|"workflow"|"bot"|"ops"|"sheets"|"mail"|"phone"|"github"|"linkedin"|"tg"|"team"|"kpi"|"analytics"|"quality"|"strategy"|"process"|"leadership";
 
 const map = {
   db: Database,
@@ -13,7 +13,14 @@ const map = {
   phone: Phone,
   github: Github,
   linkedin: Linkedin,
-  tg: MessageCircle
+  tg: MessageCircle,
+  team: Users,
+  kpi: Target,
+  analytics: BarChart3,
+  quality: Shield,
+  strategy: TrendingUp,
+  process: Zap,
+  leadership: Briefcase
 } as const;
 
 export function IconBadge({ name, label }: { name: IconName; label: string }) {

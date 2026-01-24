@@ -29,12 +29,21 @@ export default function HomePage() {
                 <span>{profileData.personal.location}</span>
               </div>
               
-              <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <IconBadge name="workflow" label="Intercom API" />
-                <IconBadge name="db" label="PostgreSQL" />
-                <IconBadge name="sheets" label="Google Sheets" />
-                <IconBadge name="bot" label="n8n Automations" />
-                <IconBadge name="ops" label="Python Scripting" />
+              <div className="mt-6 flex flex-col items-center gap-4">
+                {/* Top row - 5 skills */}
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <IconBadge name="leadership" label="Team Leadership" />
+                  <IconBadge name="process" label="Support Operations" />
+                  <IconBadge name="kpi" label="SLA & KPI Management" />
+                  <IconBadge name="quality" label="Quality Control" />
+                  <IconBadge name="analytics" label="Performance Metrics" />
+                </div>
+                {/* Bottom row - 3 skills */}
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <IconBadge name="strategy" label="Strategic Planning" />
+                  <IconBadge name="team" label="Cross-functional Collaboration" />
+                  <IconBadge name="workflow" label="Customer Experience" />
+                </div>
               </div>
             </div>
           </div>
