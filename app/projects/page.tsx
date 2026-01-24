@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowLeft, Code, Database, Zap, TrendingUp } from 'lucide-react'
+import { ArrowLeft, Code, Database, Zap, TrendingUp, Users, Globe2, Settings } from 'lucide-react'
 import Link from 'next/link'
 import profileData from '@/content/profile.json'
 import { Section } from '@/components/Section'
@@ -31,15 +31,24 @@ export default function ProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 js-reveal-section">
-            {profileData.projects.map((project, index) => (
-              <div key={index} className="card p-6 lift" data-gsap-hover>
-                <div className="flex items-center gap-3 mb-4">
-                  {index === 0 && <Zap className="h-5 w-5 text-accent" />}
-                  {index === 1 && <Database className="h-5 w-5 text-accent" />}
-                  {index === 2 && <TrendingUp className="h-5 w-5 text-accent" />}
-                  <h3 className="text-lg font-bold text-text-primary">{project.title}</h3>
-                </div>
+          <div className="flex justify-center js-reveal-section">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
+              {profileData.projects.map((project, index) => {
+                // Иконки для каждого проекта
+                const projectIcons = [
+                  <Zap key="zap" className="h-5 w-5 text-accent" />, // Support System from Scratch
+                  <Database key="db" className="h-5 w-5 text-accent" />, // Workflow Automation System
+                  <TrendingUp key="trend" className="h-5 w-5 text-accent" />, // Support Analytics & Quality Control
+                  <Users key="users" className="h-5 w-5 text-accent" />, // 24/7 Support Department Setup
+                  <Globe2 key="globe" className="h-5 w-5 text-accent" />, // Support Operations Optimization & Geo-Automation
+                ]
+                
+                return (
+                  <div key={index} className="card p-6 lift" data-gsap-hover>
+                    <div className="flex items-center gap-3 mb-4">
+                      {projectIcons[index]}
+                      <h3 className="text-lg font-bold text-text-primary">{project.title}</h3>
+                    </div>
                 <p className="text-text-secondary mb-6">
                   {project.description}
                 </p>
@@ -71,8 +80,10 @@ export default function ProjectsPage() {
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+                  </div>
+                )
+              })}
+            </div>
           </div>
 
           {/* Additional Project Information */}

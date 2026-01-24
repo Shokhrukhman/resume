@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Mail, Phone, MapPin, ExternalLink, Download, User, MessageCircle, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Download, User, MessageCircle, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import profileData from '@/content/profile.json'
 import { IconBadge } from '@/components/IconBadge'
@@ -156,7 +156,7 @@ export default function HomePage() {
 
           <div className="card p-4 lift w-[240px]">
             <div className="flex items-center space-x-3">
-              <ExternalLink className="h-5 w-5 text-accent flex-shrink-0" />
+              <Send className="h-5 w-5 text-accent flex-shrink-0" />
               <div className="min-w-0">
                 <p className="text-sm text-text-muted">Telegram</p>
                 <a 

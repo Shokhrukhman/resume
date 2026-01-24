@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Mail, Phone, MapPin, ExternalLink, ArrowLeft, Calendar, Building, GraduationCap, Award, Globe, MessageCircle, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, ArrowLeft, Calendar, Building, GraduationCap, Award, Globe, MessageCircle, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import profileData from '@/content/profile.json'
 import { Section } from '@/components/Section'
@@ -57,7 +57,7 @@ export default function ResumePage() {
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <ExternalLink className="h-4 w-4 text-accent flex-shrink-0" />
+                  <Send className="h-4 w-4 text-accent flex-shrink-0" />
                   <a href={profileData.personal.telegram} target="_blank" rel="noopener noreferrer" className="text-text-primary hover:text-accent">
                     Telegram
                   </a>
