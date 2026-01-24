@@ -22,8 +22,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'Shokhrukh Koshel' }],
   creator: 'Shokhrukh Koshel',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
     apple: '/favicon.ico',
+    shortcut: '/favicon.ico',
   },
   openGraph: {
     type: 'website',

@@ -34,7 +34,7 @@
   },
   "experience": [
     {
-      "company": "IT / FinTech Product (NDA)",
+      "company": "IT / FinTech Product (NDA) (Remote)",
       "position": "Head of Support team",
       "period": "November 2025 — Present",
       "achievements": [
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "company": "FinTech Product (NDA)",
+      "company": "FinTech Product (NDA) (Remote)",
       "position": "Senior Supervisor",
       "period": "May 2025 — October 2025",
       "achievements": [
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "company": "Web3 Social Platform (NDA)",
+      "company": "Web3 Social Platform (NDA) (Remote)",
       "position": "Support Analyst / Senior Supervisor",
       "period": "August 2024 — October 2025",
       "achievements": [
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "company": "Matrius (Remote)",
+      "company": "Matrius (Bishkek, Kyrgyzstan)",
       "position": "Programming Teacher",
       "period": "June 2024 — September 2024",
       "achievements": [
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "company": "EdenEX (Bratislava, Slovakia)",
+      "company": "EdenEX (Remote / Bratislava, Slovakia)",
       "position": "CRM Integrator & Business Development Specialist",
       "period": "November 2023 — March 2025",
       "achievements": [
@@ -181,6 +181,18 @@
       "description": "Developed Quality Control department foundation, built analytics dashboards, and created custom API scripts for Intercom data analysis. Led team of 14 specialists.",
       "technologies": ["PostgreSQL", "Python", "Intercom API", "Data Analysis", "Team Management"],
       "impact": "Improved support performance and product metrics through data-driven insights"
+    },
+    {
+      "title": "24/7 Support Department Setup",
+      "description": "Built a complete support department from scratch for a startup project, establishing 24/7 coverage with a team of 3 specialists. Designed efficient workflows to minimize customer wait times, implemented comprehensive metrics tracking for SLA compliance, response quality, and issue resolution speed. Created a knowledge base from the ground up to support both agents and customers.",
+      "technologies": ["Intercom", "Workflow Design", "SLA Management", "Knowledge Base", "Team Building"],
+      "impact": "24/7 support coverage with optimized workflows and comprehensive metrics tracking"
+    },
+    {
+      "title": "Support Operations Optimization & Geo-Automation",
+      "description": "Optimized support department operations by eliminating manual and routine tasks through API automation in Intercom, reducing operator workload by 60%. Built automated response flows from scratch for multiple geographic regions (Azerbaijan, Kazakhstan, Turkey, Chile, Argentina). Established comprehensive data collection and analysis systems for customer inquiry tracking.",
+      "technologies": ["Intercom API", "Automation", "Geo-Targeting", "Data Collection", "Process Optimization"],
+      "impact": "60% reduction in operator workload, automated multi-region support flows, comprehensive analytics foundation"
     }
   ]
 }
