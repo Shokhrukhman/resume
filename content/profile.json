@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Shokhrukh Koshel",
-    "title": "Support Analyst / Process Automation Specialist",
+    "title": "Support Analyst / Head of Support",
     "location": "Dubai — Remote",
     "email": "regisanima55@gmail.com",
     "phone": "+7 (904) 776-07-54",
@@ -9,127 +9,178 @@
     "whatsapp": "https://wa.me/79047760754",
     "linkedin": "https://www.linkedin.com/in/shokhrukh-koshel-379735353/"
   },
-  "summary": "Versatile specialist with strong experience in **technical support**, **analytics**, and **process automation**. Skilled in building efficient systems using **Python**, **PostgreSQL**, **Google Sheets**, and **n8n** to improve workflows and reduce operational load. Proven ability to analyze data, optimize user experience, and lead teams through structured communication and quality control. Combines analytical thinking with a customer-centered approach to deliver measurable results and continuous improvement.",
+  "summary": "Customer Support Manager with a strong technical and analytical background. Experienced in leading support teams, optimizing workflows, and implementing automation and knowledge bases to improve efficiency and service quality. Skilled in defining KPIs, analyzing performance metrics, and building scalable support operations. Focused on customer experience, team development, and measurable operational results.",
   "skills": {
     "technical": [
       "Python (automation & analytics)",
       "PostgreSQL",
-      "Google Sheets (dashboards, formulas)",
-      "Intercom (API, workflows, analytics)",
+      "Google Sheets (dashboards, reporting)",
+      "Intercom (workflows, automation, analytics, API)",
       "n8n (automation)",
-      "CRM systems (AmoCRM, optimization)"
+      "CRM & Support Systems (ticketing, automation, optimization)",
+      "Telegram Support Operations"
     ],
     "analytical": [
-      "Data Analysis (cohort, funnel, retention)",
-      "Technical Support & QA",
-      "Sales & Customer Retention",
-      "Process Optimization"
+      "Customer Support Leadership & Team Management",
+      "Support Process Design & Optimization",
+      "KPI & SLA Management",
+      "Quality Assurance & Communication Standards",
+      "Support Automation (macros, chatbots, workflows)",
+      "Knowledge Base Development & Self-Service Solutions",
+      "Support Analytics & Performance Metrics",
+      "Data Analysis (funnels, cohorts, retention)",
+      "Customer Insights & Product Feedback Loop"
     ]
   },
   "experience": [
     {
-      "company": "Web3 Social Platform (NDA)",
-      "position": "Support Analyst / Process Automation Specialist",
-      "period": "2024–2025",
+      "company": "IT / FinTech Product (NDA)",
+      "position": "Head of Support team",
+      "period": "November 2025 — Present",
       "achievements": [
-        "Automated workflows in Google Sheets and n8n (reduced manual work by 96%)",
-        "Built PostgreSQL dashboards",
-        "Developed API scripts for Intercom data",
-        "Performed cohort & funnel analysis",
-        "Led QC meetings",
-        "Improved product KPIs"
+        "Built the customer support function from scratch, including processes, tools, and operational standards",
+        "Recruited, onboarded, and managed a team of 3 support specialists, providing 24/7 customer support coverage",
+        "Implemented Intercom as the primary support platform and designed custom workflows, automation rules, and routing logic",
+        "Created and structured a comprehensive knowledge base for both agents and users, significantly reducing repetitive and low-value inquiries",
+        "Defined and introduced support KPIs (SLA, response time, resolution quality, agent workload) and established performance monitoring",
+        "Designed automation and self-service flows that reduced pressure on support agents and improved overall efficiency",
+        "Regularly analyzed customer requests and escalations, sharing insights with the product team to drive UX and feature improvements",
+        "Built a scalable support model ready for future team and product growth"
+      ]
+    },
+    {
+      "company": "FinTech Product (NDA)",
+      "position": "Head of Customer Support",
+      "period": "May 2025 — October 2025",
+      "achievements": [
+        "Built and optimized the customer support system in a FinTech product, redesigning core processes, introducing clear KPIs, and improving overall support quality",
+        "Led and managed a support team of 15 specialists, participating in scaling the department to 20+ team members",
+        "Designed and maintained a two-tier support structure, ensuring clear ownership, SLA compliance, and transparent internal workflows",
+        "Fully owned support operations across Intercom and Telegram, including queue setup, routing rules, macros, and reporting"
+      ]
+    },
+    {
+      "company": "Web3 Social Platform (NDA)",
+      "position": "Support Analyst / Process Automation Specialist / Support Team Leader",
+      "period": "August 2024 — October 2025",
+      "achievements": [
+        "Managed user support operations, user retention, and complaint handling",
+        "Participated in anti-fraud investigations and ensured compliance with internal security policies",
+        "Developed the foundation of the Quality Control department and led regular team meetings to improve support performance",
+        "Built analytics funnels and dashboards in PostgreSQL and Python to monitor user behavior and KPIs",
+        "Created custom API scripts to collect and analyze data from Intercom",
+        "Automated support workflows in Google Sheets and N8N, reducing manual workload by up to 96%",
+        "Conducted in-depth analyses including cohort, funnel, and cross-channel analytics to improve user retention",
+        "Performed competitive analysis; three of my proposed hypotheses were successfully implemented and improved overall product metrics",
+        "Led and managed a support team of 14 specialists"
       ]
     },
     {
       "company": "Matrius (Remote)",
       "position": "Programming Teacher",
-      "period": "2024",
+      "period": "June 2024 — September 2024",
       "achievements": [
-        "Taught programming to children (Python, Scratch, Lua)",
-        "Designed project-based lessons",
-        "Ran inclusive coding workshops"
+        "Taught programming to children aged 5–17 in Python, Scratch, Roblox Studio, and Lua",
+        "Created interactive lessons to make coding accessible and engaging for young learners",
+        "Guided students through project-based learning and helped them develop problem-solving skills",
+        "Adapted teaching methods to different age groups and levels of technical experience",
+        "Conducted free coding lessons for children with disabilities to support inclusive education"
       ]
     },
     {
-      "company": "Riman (Kyrgyzstan)",
+      "company": "Riman (Bishkek, Kyrgyzstan)",
       "position": "Sales & Process Optimization Specialist",
-      "period": "2024",
+      "period": "February 2024 — June 2024",
       "achievements": [
-        "Integrated automation bots to improve efficiency",
-        "Managed key partner relationships",
-        "Optimized CRM processes"
+        "Collected and analyzed feedback from clients and sales teams to identify improvement areas",
+        "Managed client sales and maintained relationships with key partners",
+        "Optimized internal workflows by integrating automation bots to improve team efficiency",
+        "Collaborated with management to enhance sales processes and reporting systems",
+        "Successfully completed key automation projects before contract completion"
       ]
     },
     {
-      "company": "EdenEX (Slovakia)",
+      "company": "EdenEX (Bratislava, Slovakia)",
       "position": "CRM Integrator & Business Development Specialist",
-      "period": "2023–2025",
+      "period": "November 2023 — March 2025",
       "achievements": [
-        "Implemented and optimized CRM workflows (AmoCRM)",
-        "Improved sales team efficiency",
-        "Developed automation scripts"
+        "Conducted B2B meetings with partners to facilitate early platform access and strengthen cooperation",
+        "Implemented and optimized CRM processes using AmoCRM to improve sales team efficiency",
+        "Designed automation workflows and scripts to streamline internal operations",
+        "Collaborated with developers to enhance platform functionality based on user feedback"
       ]
     },
     {
-      "company": "Algorithmics (Moscow)",
+      "company": "Algorithmics (Remote / Moscow)",
       "position": "Sales & Student Coordinator",
-      "period": "2023",
+      "period": "July 2023 — October 2023",
       "achievements": [
-        "Managed student onboarding, retention, and parent communication for an online programming school"
+        "Managed the sales process and student administration for an online programming school",
+        "Provided customer retention support and handled objections from parents and students",
+        "Coordinated children's learning progress and maintained regular communication with parents",
+        "Ensured smooth onboarding for new students and assisted with scheduling and class organization",
+        "Contributed to improved client satisfaction and retention metrics through personalized service"
       ]
     },
     {
-      "company": "SkyEng (Moscow)",
+      "company": "SkyEng (Remote / Moscow)",
       "position": "Sales & Support Specialist",
-      "period": "2021–2023",
+      "period": "June 2021 — July 2023",
       "achievements": [
-        "Promoted to Deputy Team Lead",
-        "Handled B2C/B2B sales, support, onboarding, and call quality control"
+        "Worked in online English course sales and technical support, focusing on both cold calls and customer retention",
+        "Provided assistance to existing clients, resolving technical issues and ensuring smooth learning experience",
+        "Promoted to Deputy Team Lead after 3 months, managing a small sales and support team",
+        "Conducted onboarding for new employees, listened to calls, and provided performance feedback",
+        "Monitored call quality, identified growth areas, and implemented improvement plans",
+        "Participated in marketing and traffic management initiatives",
+        "Handled large-scale B2C and B2B deals, selling bulk course packages and IT profession programs"
       ]
     }
   ],
   "education": [
     {
-      "degree": "Bachelor's in Criminal Law",
-      "institution": "State Humanitarian-Technological University, Moscow",
-      "period": "2017–2021"
+      "degree": "Bachelor's Degree in Criminal Law",
+      "institution": "State Humanitarian-Technological University (GGTU), Moscow, Russia",
+      "period": "September 2017 — July 2021"
     },
     {
       "degree": "Associate Degree in Information Security",
-      "institution": "Kyrgyulin Technological College, Fergana",
-      "period": "2013–2016"
+      "institution": "Kyrgyulin Technological College, Fergana, Uzbekistan",
+      "period": "September 2013 — June 2016"
     }
   ],
   "achievements": [
-    "Built Python scripts reducing data processing time by 30%",
-    "Automated ticket handling and analytics, increasing support efficiency by 20%",
-    "Proposed and implemented 3 hypotheses improving retention metrics"
+    "Implemented support automation initiatives: macros, workflows, knowledge base articles, and integrations, significantly reducing manual workload for agents",
+    "Developed and continuously improved the internal and external knowledge base, increasing first-contact resolution and reducing repeat tickets",
+    "Established communication standards and tone-of-voice guidelines; trained agents and conducted regular quality reviews",
+    "Monitored and analyzed key support metrics (ticket volume, FRT, AHT, SLA, repeat requests) and drove data-based improvements",
+    "Collected and delivered customer insights and recurring issues to the product and engineering teams to improve user experience and product stability",
+    "Implemented a Python script that reduced data processing time by 30%",
+    "Led a team initiative to streamline support ticket handling processes, resulting in a 20% increase in efficiency"
   ],
   "languages": ["English", "Russian", "Uzbek"],
   "interests": [
-    "Process optimization",
-    "Automation",
-    "Data analytics",
-    "Continuous learning"
+    "Continuous Learning in Emerging Technologies",
+    "Process Optimization and Efficiency Improvement"
   ],
   "projects": [
     {
+      "title": "Support System from Scratch",
+      "description": "Built complete customer support function from scratch for FinTech product, including processes, tools, team management, and operational standards. Implemented Intercom with custom workflows and automation.",
+      "technologies": ["Intercom", "Telegram", "Knowledge Base", "Automation", "KPI Management"],
+      "impact": "24/7 support coverage with scalable model for future growth"
+    },
+    {
       "title": "Workflow Automation System",
-      "description": "Built comprehensive automation system using n8n and Python to reduce manual work by 96% in data processing workflows.",
-      "technologies": ["Python", "n8n", "PostgreSQL", "Google Sheets API"],
-      "impact": "96% reduction in manual work"
+      "description": "Automated support workflows in Google Sheets and N8N, reducing manual workload by up to 96%. Built analytics funnels and dashboards in PostgreSQL and Python.",
+      "technologies": ["Python", "n8n", "PostgreSQL", "Google Sheets", "Intercom API"],
+      "impact": "96% reduction in manual work, improved team efficiency"
     },
     {
-      "title": "Analytics Dashboard",
-      "description": "Developed real-time analytics dashboard using PostgreSQL and Google Sheets for tracking user behavior and business metrics.",
-      "technologies": ["PostgreSQL", "Google Sheets", "Python", "Intercom API"],
-      "impact": "Real-time insights for data-driven decisions"
-    },
-    {
-      "title": "CRM Optimization",
-      "description": "Implemented and optimized CRM workflows in AmoCRM, improving sales team efficiency and customer retention.",
-      "technologies": ["AmoCRM", "Python", "Automation Scripts"],
-      "impact": "20% increase in support efficiency"
+      "title": "Support Analytics & Quality Control",
+      "description": "Developed Quality Control department foundation, built analytics dashboards, and created custom API scripts for Intercom data analysis. Led team of 14 specialists.",
+      "technologies": ["PostgreSQL", "Python", "Intercom API", "Data Analysis", "Team Management"],
+      "impact": "Improved support performance and product metrics through data-driven insights"
     }
   ]
 }
