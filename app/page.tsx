@@ -22,7 +22,7 @@ export default function HomePage() {
                 {profileData.personal.name}
               </h1>
               <p className="text-lg text-text-secondary mb-6 js-hero-subtitle">
-                <span className="emph">Support Analyst</span> / Process Automation Specialist
+                <span className="emph">Support Analyst</span> / Head of Support
               </p>
               <div className="flex items-center justify-center gap-2 text-text-muted mb-8">
                 <MapPin className="h-4 w-4" />

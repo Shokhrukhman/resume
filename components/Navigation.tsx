@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Home, FileText, FolderKanban } from 'lucide-react'
-import profileData from '@/content/profile.json'
+import { RegisAnimaLogo } from './RegisAnimaLogo'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -48,10 +48,10 @@ export function Navigation() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-lg md:text-xl font-bold text-accent hover:text-accent/80 transition-colors"
+            className="flex items-center transition-all duration-300 hover:scale-[1.08] logo-link"
             onClick={() => setIsOpen(false)}
           >
-            {profileData.personal.name.split(' ')[0]}
+            <RegisAnimaLogo className="h-7 w-7 md:h-8 md:w-8" />
           </Link>
 
           {/* Desktop Navigation */}
