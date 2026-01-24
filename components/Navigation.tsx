@@ -3,12 +3,15 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Home, FileText, FolderKanban } from 'lucide-react'
+import { Menu, X, Home, FileText, FolderKanban, Globe } from 'lucide-react'
 import { RegisAnimaLogo } from './RegisAnimaLogo'
+import { useI18n, Language } from '@/lib/i18n'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [langMenuOpen, setLangMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { language, setLanguage, t } = useI18n()
 
   // Закрывать меню при клике на ссылку или изменении роута
   useEffect(() => {
@@ -22,21 +25,30 @@ export function Navigation() {
       if (isOpen && !target.closest('.mobile-menu-container') && !target.closest('button[aria-label="Toggle menu"]') && !target.closest('.mobile-dropdown-menu')) {
         setIsOpen(false)
       }
+      if (langMenuOpen && !target.closest('.language-menu-container')) {
+        setLangMenuOpen(false)
+      }
     }
 
-    if (isOpen) {
+    if (isOpen || langMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside)
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [isOpen])
+  }, [isOpen, langMenuOpen])
 
   const navItems = [
-    { href: '/', label: 'Home', icon: Home },
-    { href: '/resume', label: 'Resume', icon: FileText },
-    { href: '/projects', label: 'Projects', icon: FolderKanban },
+    { href: '/', label: t('nav.home'), icon: Home },
+    { href: '/resume', label: t('nav.resume'), icon: FileText },
+    { href: '/projects', label: t('nav.projects'), icon: FolderKanban },
+  ]
+
+  const languages: { code: Language; name: string; flag: string }[] = [
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'uz', name: "O'zbek", flag: '🇺🇿' },
   ]
 
   const isActive = (href: string) => pathname === href
@@ -55,7 +67,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => {
               const Icon = item.icon
               return (
@@ -73,6 +85,39 @@ export function Navigation() {
                 </Link>
               )
             })}
+            
+            {/* Language Switcher */}
+            <div className="relative language-menu-container">
+              <button
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-text-secondary hover:text-accent hover:bg-midnight-800 transition-all duration-300"
+              >
+                <Globe className="h-4 w-4" />
+                <span className="text-sm">{languages.find(l => l.code === language)?.flag}</span>
+              </button>
+              
+              {langMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-midnight-950 border border-border-subtle rounded-lg shadow-xl overflow-hidden z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLanguage(lang.code)
+                        setLangMenuOpen(false)
+                      }}
+                      className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-all duration-200 ${
+                        language === lang.code
+                          ? 'text-accent bg-accent/20'
+                          : 'text-text-primary hover:text-accent hover:bg-midnight-800'
+                      }`}
+                    >
+                      <span>{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Container */}
@@ -102,7 +147,7 @@ export function Navigation() {
                 className="w-full flex items-center gap-3 px-4 py-3 text-text-primary hover:text-accent hover:bg-midnight-800 transition-all duration-200 border-b border-border-subtle"
               >
                 <X className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm font-medium">Close Menu</span>
+                <span className="text-sm font-medium">{t('buttons.closeMenu')}</span>
               </button>
               
               {/* Navigation Items */}
@@ -124,6 +169,28 @@ export function Navigation() {
                   </Link>
                 )
               })}
+              
+              {/* Language Switcher in Mobile Menu */}
+              <div className="border-t border-border-subtle mt-1">
+                <div className="px-4 py-2 text-xs text-text-muted uppercase">{t('mobile.language')}</div>
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setLanguage(lang.code)
+                      setIsOpen(false)
+                    }}
+                    className={`w-full flex items-center gap-3 px-4 py-3 transition-all duration-200 ${
+                      language === lang.code
+                        ? 'text-accent bg-accent/20 border-l-4 border-accent'
+                        : 'text-text-primary hover:text-accent hover:bg-midnight-800'
+                    }`}
+                  >
+                    <span>{lang.flag}</span>
+                    <span className="text-sm font-medium">{lang.name}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
